@@ -14,9 +14,8 @@ import umm.softwaredesign.stacklab.StackIF;
  * @version $Revision: 1.16 $
  */
 public class Stack<T> implements StackIF<T> {
-    /**
-     * Construct an empty stack.
-     */
+    Stack<T> theStack = new Stack<T>();
+    
     public Stack() {
         throw new UnsupportedOperationException();
     }
@@ -30,7 +29,11 @@ public class Stack<T> implements StackIF<T> {
      *            the list of items to initialize the stack
      */
     public Stack(List<T> items) {
-        throw new UnsupportedOperationException();
+       // throw new UnsupportedOperationException();
+        
+        for(int i = 0; i < items.size(); i++){
+        	
+        }
     }
 
     /**
@@ -38,6 +41,8 @@ public class Stack<T> implements StackIF<T> {
      * 
      * @return the number of elements on the stack
      */
+    
+    
     public int size() {
         throw new UnsupportedOperationException();
     }
