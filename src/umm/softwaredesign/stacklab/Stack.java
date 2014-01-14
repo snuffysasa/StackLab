@@ -1,5 +1,7 @@
 package umm.softwaredesign.stacklab;
 
+// Snuffy Linder and Josh Chapman
+
 import java.util.List;
 
 import umm.softwaredesign.stacklab.StackIF;
