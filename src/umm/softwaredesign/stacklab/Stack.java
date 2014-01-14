@@ -14,7 +14,9 @@ import umm.softwaredesign.stacklab.StackIF;
  * @version $Revision: 1.16 $
  */
 public class Stack<T> implements StackIF<T> {
-    Stack<T> theStack = new Stack<T>();
+	/**
+     * Construct an empty stack.
+     */
     
     public Stack() {
         throw new UnsupportedOperationException();
