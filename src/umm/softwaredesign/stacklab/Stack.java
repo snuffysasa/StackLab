@@ -49,13 +49,7 @@ public class Stack<T> implements StackIF<T> {
     
     public int size() {
         //throw new UnsupportedOperationException();
-        int count = 0;
-       // while(theStack.isEmpty()){
-       // 	theStack.pop();
-       // 	count++;
-       // }
-        
-        return count;
+        return theStack.size();
     }
 
     /**
