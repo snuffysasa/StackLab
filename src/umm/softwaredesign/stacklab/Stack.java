@@ -17,6 +17,8 @@ public class Stack<T> implements StackIF<T> {
 	/**
      * Construct an empty stack.
      */
+	Stack<T> theStack = new Stack<T>();
+
     
     public Stack() {
         throw new UnsupportedOperationException();
@@ -31,14 +33,18 @@ public class Stack<T> implements StackIF<T> {
      *            the list of items to initialize the stack
      */
     public Stack(List<T> items) {
-       // throw new UnsupportedOperationException();
-        
+        //throw new UnsupportedOperationException();
+
+
         for(int i = 0; i < items.size(); i++){
-        	
+			theStack.push(items.get(i));
         }
+			
+        return;
     }
 
-    /**
+
+	/**
      * Computes the size of the stack.
      * 
      * @return the number of elements on the stack
@@ -55,7 +61,8 @@ public class Stack<T> implements StackIF<T> {
      * @return true if the stack is empty, false otherwise
      */
     public boolean isEmpty() {
-        throw new UnsupportedOperationException();
+        //throw new UnsupportedOperationException();
+        return theStack.isEmpty();
     }
 
     /**
