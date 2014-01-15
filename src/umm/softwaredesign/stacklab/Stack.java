@@ -1,4 +1,5 @@
 package umm.softwaredesign.stacklab;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,11 +13,12 @@ public class Stack<T> implements StackIF<T> {
 	/**
      * Construct an empty stack.
      */
-	Stack<T> theStack = new Stack<T>();
+	ArrayList<T> theStack = new ArrayList<T>();
+
 
     
     public Stack() {
-        throw new UnsupportedOperationException();
+       // throw new UnsupportedOperationException();
     }
 
     /**
@@ -31,9 +33,10 @@ public class Stack<T> implements StackIF<T> {
         //throw new UnsupportedOperationException();
     	
         for(int i = 0; i < items.size(); i++){
-			theStack.push(items.get(i));
+			theStack.add(items.get(i));
         }
         return;
+        
     }
 
 
@@ -47,10 +50,10 @@ public class Stack<T> implements StackIF<T> {
     public int size() {
         //throw new UnsupportedOperationException();
         int count = 0;
-        while(theStack.isEmpty()){
-        	theStack.pop();
-        	count++;
-        }
+       // while(theStack.isEmpty()){
+       // 	theStack.pop();
+       // 	count++;
+       // }
         
         return count;
     }
