@@ -35,7 +35,7 @@ public class Stack<T> implements StackIF<T> {
     public Stack(List<T> items) {
         //throw new UnsupportedOperationException();
     	
-        for(int i = 1; i < items.size(); i++){
+        for(int i = 0; i < items.size(); i++){
 			theStack.push(items.get(i));
         }
         return;
