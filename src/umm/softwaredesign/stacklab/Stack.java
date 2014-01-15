@@ -1,10 +1,5 @@
 package umm.softwaredesign.stacklab;
-
-// Snuffy Linder and Josh Chapman
-
 import java.util.List;
-
-import umm.softwaredesign.stacklab.StackIF;
 
 /**
  * Implementation of the StackIF interface for a basic stack.
@@ -50,7 +45,14 @@ public class Stack<T> implements StackIF<T> {
     
     
     public int size() {
-        throw new UnsupportedOperationException();
+        //throw new UnsupportedOperationException();
+        int count = 0;
+        while(theStack.isEmpty()){
+        	theStack.pop();
+        	count++;
+        }
+        
+        return count;
     }
 
     /**
