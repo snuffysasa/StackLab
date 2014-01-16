@@ -123,10 +123,16 @@ public class Stack<T> implements StackIF<T> {
      */
     @Override
     public String toString() {
-        String string = "";
-        for(int i = 0; i < theStack.size(); i++) {
-        	string = "" + theStack.get(i);
+        String string = "Stack[";
+        if(theStack.isEmpty()){
+        	return string + "]";
         }
-        return string;
+        else {
+        string = string + theStack.get(0); 
+        for(int i = 1; i < theStack.size(); i++) {
+        	string = string + ", "  + theStack.get(i);
+        }
+        }
+        return string + "]";
     }
 }
