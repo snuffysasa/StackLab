@@ -69,7 +69,8 @@ public class Stack<T> implements StackIF<T> {
      *            the value to be pushed.
      */
     public void push(T value) {
-        throw new UnsupportedOperationException();
+    	theStack.add(value);
+    	return;
     }
 
     /**
@@ -81,7 +82,11 @@ public class Stack<T> implements StackIF<T> {
      *             if the stack is empty
      */
     public T pop() {
-        throw new UnsupportedOperationException();
+    	if(theStack.isEmpty()) {
+    		throw new StackUnderflowException();
+    	} else {
+    		return theStack.remove(theStack.size() - 1);
+    	}
     }
 
     /**
@@ -93,7 +98,7 @@ public class Stack<T> implements StackIF<T> {
      *             if the stack is empty
      */
     public T top() {
-        throw new UnsupportedOperationException();
+        return theStack.get(theStack.size() - 1);
     }
 
     /**
@@ -105,7 +110,7 @@ public class Stack<T> implements StackIF<T> {
      *         elements
      */
     public boolean hasElements(List<T> items) {
-        throw new UnsupportedOperationException();
+        return items.equals(theStack);
     }
 
     /**
@@ -118,6 +123,10 @@ public class Stack<T> implements StackIF<T> {
      */
     @Override
     public String toString() {
-        throw new UnsupportedOperationException();
+        String string = "";
+        for(int i = 0; i < theStack.size(); i++) {
+        	string = "" + theStack.get(i);
+        }
+        return string;
     }
 }
