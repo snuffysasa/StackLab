@@ -20,6 +20,7 @@ package umm.softwaredesign.stacklab;
  *
  * @todo Implement the missing constructors.
  */
+@SuppressWarnings("serial")
 public class StackUnderflowException extends RuntimeException {
     /*
      * We don't actually need anything here, since this class exists
